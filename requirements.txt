@@ -1,5 +1,5 @@
 requests
 streamlit
 pandas
-urllib
+urllib.request
 streamlit_lottie
