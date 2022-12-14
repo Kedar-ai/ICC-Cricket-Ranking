@@ -6,14 +6,14 @@ from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="ICC Cricket Ranking", page_icon=":cricket_bat_and_ball:",layout="wide")
 
-# def load_lottieurl(url):
-#     r = requests.get(url)
-#     if r.status_code != 200:
-#         return None
-#     return r.json()
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
-# Load Assets
-# lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_1fXD2hXInk.json")
+Load Assets
+lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_1fXD2hXInk.json")
 
 req = Request('https://sports.ndtv.com/cricket/icc-rankings',headers={'user-Agent':'Mozilla/5.0'})
 webpage = urlopen(req)
@@ -25,8 +25,8 @@ st.markdown("<h1 style='text-align: center; color: black;'>Cricket ICC Ranking</
 # st.title('Cricket ICC Ranking')
 
 col1,col2,col3 = st.columns([0.5,2,0.5])
-# with col1:
-#     st_lottie(lottie_coding, height=250,key='coding')
+with col1:
+    st_lottie(lottie_coding, height=250,key='coding')
 
 with col2:
     menu1 = ["Team","Player"]
@@ -82,8 +82,8 @@ with col2:
             if c=="All Rounder":
                 df=data[11]
                 st.dataframe(df)
-# with col3:
-#     st_lottie(lottie_coding, height=250)
+with col3:
+    st_lottie(lottie_coding, height=250)
 
 with st.expander("For More",expanded=False):
     st.write("[@cricbuzz](https://www.cricbuzz.com/)")
