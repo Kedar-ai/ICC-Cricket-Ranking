@@ -1,5 +1,5 @@
 requests
 streamlit
 pandas
-urllib.request
+urllib = '1.26.13'
 streamlit_lottie
