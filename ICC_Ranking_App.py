@@ -12,7 +12,7 @@ def load_lottieurl(url):
         return None
     return r.json()
 
-Load Assets
+# Load Assets
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_1fXD2hXInk.json")
 
 req = Request('https://sports.ndtv.com/cricket/icc-rankings',headers={'user-Agent':'Mozilla/5.0'})
